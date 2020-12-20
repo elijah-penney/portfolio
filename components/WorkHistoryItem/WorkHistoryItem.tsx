@@ -21,7 +21,7 @@ interface WorkHistoryItemProps {
 /**
  * @namespace Components/WorkHistoryItem
  */
-export const WorkHistoryItem: React.FC = () => {
+export const WorkHistoryItem: React.FC<WorkHistoryItemProps> = () => {
   return (
     <WorkItemContainer>
       <Row

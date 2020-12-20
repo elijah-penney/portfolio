@@ -10,7 +10,7 @@ import {
   Row,
   WorkHistoryItem,
 } from '@components';
-import { theme } from '@constants';
+import { theme, workHistory } from '@constants';
 
 const index = () => {
   return (
@@ -27,9 +27,9 @@ const index = () => {
           <Column>
             <SubHeader>Work History</SubHeader>
             <Row width='100%' justify='space-between' flexWrap='wrap'>
-              <WorkHistoryItem />
-              <WorkHistoryItem />
-              <WorkHistoryItem />
+              {workHistory.map((item) => (
+                <WorkHistoryItem key={item.position} {...item} />
+              ))}
             </Row>
           </Column>
         </StyledSection>
